@@ -255,5 +255,9 @@ async def ask_question(request: QuestionRequest):
         'response': smart_response
     }
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 # To run the server, use the following command:
 # uvicorn main:app --reload
