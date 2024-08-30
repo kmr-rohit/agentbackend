@@ -224,7 +224,7 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 from pandasai import SmartDataframe
-
+from fastapi.middleware.cors import CORSMiddleware
 # Set your PandasAI API key
 os.environ['PANDASAI_API_KEY'] = "$2a$10$pf1hEUkF90iwg/BRgETZJOwoATmU9DO4usfWSHgVUjsbVV7w8OoeC"
 
@@ -236,7 +236,13 @@ sdf = SmartDataframe(df)
 
 # Create a FastAPI app
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods
+    allow_headers=["*"],  # Allows all HTTP headers
+)
 # Define a model for the request body
 class QuestionRequest(BaseModel):
     question: str
