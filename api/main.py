@@ -229,7 +229,7 @@ from pandasai import SmartDataframe
 os.environ['PANDASAI_API_KEY'] = "$2a$10$pf1hEUkF90iwg/BRgETZJOwoATmU9DO4usfWSHgVUjsbVV7w8OoeC"
 
 # Load the CSV data
-df = pd.read_csv("data.csv")
+df = pd.read_csv("./data.csv")
 sdf = SmartDataframe(df)
 
 # Create a FastAPI app
