@@ -1,0 +1,200 @@
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1001,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1002,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1003,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1004,2,4,2,100
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1005,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1006,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1007,2,4,2,100
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1008,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1009,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1010,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1011,2,4,2,100
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1012,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1013,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1014,2,4,2,100
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1015,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,StarElectronics,CA,EC3MMORD1016,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,WaldomElectronics,Singapore,EC3MMORD1017,2,3,1,50
+MicrophonesSmall,ECMicrophone3mm,WaldomElectronics,Singapore,EC3MMORD1018,2,4,2,100
+MicrophonesSmall,ECMicrophone3mm,WaldomElectronics,Singapore,EC3MMORD1019,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,WaldomElectronics,Singapore,EC3MMORD1020,2,5,3,150
+MicrophonesSmall,ECMicrophone3mm,WaldomElectronics,Singapore,EC3MMORD1021,2,4,2,100
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1022,2,3,1,50
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1023,2,3,1,50
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1024,2,3,1,50
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1025,2,4,2,100
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1026,2,5,3,150
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1027,2,5,3,150
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1028,2,4,2,100
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1029,2,3,1,50
+AudioDevices,RectangularSpeaker,WaldomElectronics,Singapore,EC3MMORD1030,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1031,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1032,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1033,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1034,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1035,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1036,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1037,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1038,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1039,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1040,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1041,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1042,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1043,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1044,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1045,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1046,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1047,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1048,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1049,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1050,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1051,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1052,2,3,1,50
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1053,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1054,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1055,2,5,3,150
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1056,2,4,2,100
+AudioDevices,Piezoelectricbuzzers,FlipElectronics,Delhi,EC3MMORD1057,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1058,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1059,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1060,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1061,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1062,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1063,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1064,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1065,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1066,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1067,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1068,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1069,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1070,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1071,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1072,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1073,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1074,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1075,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1076,2,5,3,150
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1077,2,4,2,100
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1078,2,3,1,50
+AudioDevices,SplashProofSwitch,MouserElectronics,Los Angles,EC3MMORD1079,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1080,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1081,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1082,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1083,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1084,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1085,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1086,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1087,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1088,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1089,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1090,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1091,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1092,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1093,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1094,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1095,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1096,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1097,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1098,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1099,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1100,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1101,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1102,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1103,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1104,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1105,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1106,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1107,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1108,2,3,1,50
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1109,2,4,2,100
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1110,2,5,3,150
+AudioDevices,PiezoTransducer,EdgeElectronics,Tokyo,EC3MMORD1111,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1112,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1113,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1114,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1115,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1116,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1117,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1118,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1119,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1120,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1121,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1122,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1123,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1124,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1125,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1126,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1127,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1128,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1129,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1130,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1131,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1132,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1133,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1134,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1135,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1136,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1137,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1138,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1139,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1140,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1141,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1142,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1143,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1144,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,InfiniteElectronics,New York,EC3MMORD1145,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1146,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1147,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1148,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1149,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1150,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1151,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1152,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1153,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1154,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1155,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1156,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1157,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1158,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1159,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1160,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1161,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1162,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1163,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1164,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1165,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1166,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1167,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1168,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1169,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1170,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1171,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1172,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1173,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1174,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1175,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1176,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1177,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1178,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1179,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1180,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1181,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1182,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1183,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1184,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1185,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1186,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1187,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1188,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1189,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1190,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1191,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1192,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1193,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1194,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1195,2,5,3,150
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1196,2,4,2,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1197,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1198,2,3,1,50
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,CA,EC3MMORD1199,2,3,1,50

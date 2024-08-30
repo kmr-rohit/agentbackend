@@ -1,1 +1,4 @@
 .vercel
+cache
+pandasai.log
+__pycache__
