@@ -165,7 +165,7 @@ async def ask_question(request: QuestionRequest):
         messages=[
             {
                 "role": "system",
-                "content": "I have queried a ai agent to get data from csv on user query , but i have a dataframe as response , i dont want to show this , can you generate text description based on this data. Dont act like any ai agent , just give me an answer to my query as a normal human being"
+                "content": "I have queried a ai agent to get data from csv on user query , but i have a dataframe as response , i dont want to show this , can you generate text description based on this data. Dont act like any ai agent , just give me an answer to my query as a normal human being. Don't add these type of sentences : So you want to get a text description of the data instead of the actual dataframe. In this case, the AI agent has returned a count of 14 orders from the supplier site Singapore. Here's a possible text description:  , So you're looking to get a text description based on the data in the dataframe, rather than the dataframe itself. In this case, I can provide a more human-friendly summary of the data."
             },
             {
                 "role": "user",
