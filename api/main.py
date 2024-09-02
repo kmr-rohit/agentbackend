@@ -223,7 +223,6 @@
 
 import os
 import pandas as pd
-import autogen
 from autogen import AssistantAgent
 from fastapi import FastAPI
 from pydantic import BaseModel
