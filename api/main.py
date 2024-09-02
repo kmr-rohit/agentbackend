@@ -223,7 +223,7 @@
 
 import os
 import pandas as pd
-from autogen import AssistantAgent
+from autogen.agentchat import AssistantAgent
 from fastapi import FastAPI
 from pydantic import BaseModel
 from pandasai import SmartDataframe, Agent
