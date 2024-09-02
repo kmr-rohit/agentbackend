@@ -112,7 +112,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from together import Together
 
 # Set your PandasAI and Together API keys
-os.environ['PANDASAI_API_KEY'] = "$2a$10$pf1hEUkF90iwg/BRgETZJOwoATmU9DO4usfWSHgVUjsbVV7w8OoeC"
+os.environ['PANDASAI_API_KEY'] = "$2a$10$FXX7Od49oF6GWDF7pqz4peMAuPjDqLmfnK4bZ158yCH7wpy7sLWly"
 os.environ['TOGETHER_API_KEY'] = "85cec027fc99344316c6aac0d9e71d724adc394459e6e789b8d746c6f0d0f4a7"
 
 # Load the CSV data
