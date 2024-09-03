@@ -245,7 +245,7 @@ config_list = [
     {
         "model": "llama3-8b-8192",
         "base_url": "https://api.groq.com/openai/v1",
-        "api_key": "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",
+        "api_key": "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",
         "api_type": "groq"
     }
 ]
@@ -294,7 +294,8 @@ async def ask_question(request: QuestionRequest):
                 'question': user_question,
                 'responseType':'image',
                 'response': image_base64
-        }
+            }
+    
     combined_response = {
         "question": user_question,
         "response": smart_response,
