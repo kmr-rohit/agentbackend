@@ -222,13 +222,15 @@
 
 
 import os
+import base64
+import io
 import pandas as pd
+import matplotlib.pyplot as plt
 from autogen.agentchat import AssistantAgent
 from fastapi import FastAPI
 from pydantic import BaseModel
 from pandasai import SmartDataframe, Agent
 from fastapi.middleware.cors import CORSMiddleware
-
 
 # Set your PandasAI API key
 os.environ['PANDASAI_API_KEY'] = "$2a$10$FXX7Od49oF6GWDF7pqz4peMAuPjDqLmfnK4bZ158yCH7wpy7sLWly"
@@ -274,11 +276,25 @@ class BatchTrainRequest(BaseModel):
     queries: list[str]
     codes: list[str]
 # Endpoint to handle user's question
+
+def convert_image_to_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
+
 @app.post("/ask")
 async def ask_question(request: QuestionRequest):
     user_question = request.question
     # Try to answer using the SmartDataframe
     smart_response = sdf.chat(user_question)
+    if(isinstance(smart_response,pd.DataFrame) == False):
+        if(smart_response.endswith('.png')):
+            image_path=smart_response
+            image_base64 = convert_image_to_base64(image_path)
+            return {
+                'question': user_question,
+                'responseType':'image',
+                'response': image_base64
+        }
     combined_response = {
         "question": user_question,
         "response": smart_response,
@@ -306,6 +322,7 @@ async def ask_question(request: QuestionRequest):
     summarized_response=response['content']
     return {
         'question': user_question,
+        'responseType':'text',
         'response': summarized_response
     }
 # Endpoint to train the agent with a single Q&A pair
