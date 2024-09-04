@@ -5849,3 +5849,736 @@ result = {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbacken
 2024-09-03 14:04:43 [INFO] Executing Step 7: ResultValidation
 2024-09-03 14:04:43 [INFO] Answer: {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
 2024-09-03 14:04:43 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:29:26 [INFO] Question: Plot me the chart for average variance percentage per supplier
+2024-09-04 10:29:26 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:29:26 [INFO] Prompt ID: 067414cf-ddec-448e-babe-24afb6a1b03c
+2024-09-04 10:29:26 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:29:26 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:29:26 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:29:26 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:29:31 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+MicrophonesSmall,Piezoelectricbuzzers,StarElectronics,Los Angles,EC3MMORD1193,2,4,3,150
+AudioDevices,ECMicrophone8mm,EdgeElectronics,Tokyo,EC3MMORD1097,2,5,1,50
+MicrophonesSmall,ECMicrophone3mm,FlipElectronics,New York,EC3MMORD1089,2,3,2,100
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Plot me the chart for average variance percentage per supplier
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:29:31 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:29:37 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:29:37 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Data Preparation
+data = {'Category': ['MicrophonesSmall', 'AudioDevices', 'MicrophonesSmall'],
+        'Item': ['Piezoelectricbuzzers', 'ECMicrophone8mm', 'ECMicrophone3mm'],
+        'Supplier': ['StarElectronics', 'EdgeElectronics', 'FlipElectronics'],
+        'Supplier Site': ['Los Angles', 'Tokyo', 'New York'],
+        'Order Number': ['EC3MMORD1193', 'EC3MMORD1097', 'EC3MMORD1089'],
+        'Supplier Lead Time': [2, 2, 2],
+        'Historical Lead Time': [4, 5, 3],
+        'Variance Days': [3, 1, 2],
+        'Variance Percentage': [150, 50, 100]}
+df = pd.DataFrame(data)
+
+# Average Variance Percentage per Supplier
+avg_variance = df.groupby('Supplier')['Variance Percentage'].mean().reset_index()
+
+# Plotting the Chart
+plt.figure(figsize=(10, 6))
+plt.bar(avg_variance['Supplier'], avg_variance['Variance Percentage'], color='skyblue')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.title('Average Variance Percentage per Supplier')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("avg_variance_per_supplier.png")
+
+# Declare result variable
+result = {"type": "plot", "value": "avg_variance_per_supplier.png"}
+            ```
+            
+2024-09-04 10:29:37 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:29:37 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:29:37 [INFO] Saving charts to /Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png
+2024-09-04 10:29:37 [INFO] 
+Code running:
+```
+data = {'Category': ['MicrophonesSmall', 'AudioDevices', 'MicrophonesSmall'], 'Item': ['Piezoelectricbuzzers', 'ECMicrophone8mm', 'ECMicrophone3mm'], 'Supplier': ['StarElectronics', 'EdgeElectronics', 'FlipElectronics'], 'Supplier Site': ['Los Angles', 'Tokyo', 'New York'], 'Order Number': ['EC3MMORD1193', 'EC3MMORD1097', 'EC3MMORD1089'], 'Supplier Lead Time': [2, 2, 2], 'Historical Lead Time': [4, 5, 3], 'Variance Days': [3, 1, 2], 'Variance Percentage': [150, 50, 100]}
+df = dfs[0]
+avg_variance = df.groupby('Supplier')['Variance Percentage'].mean().reset_index()
+plt.figure(figsize=(10, 6))
+plt.bar(avg_variance['Supplier'], avg_variance['Variance Percentage'], color='skyblue')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.title('Average Variance Percentage per Supplier')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+        ```
+2024-09-04 10:29:37 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:29:37 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:29:37 [INFO] Answer: {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+2024-09-04 10:29:37 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:30:40 [INFO] Question: Plot me the chart for average variance percentage per supplier
+2024-09-04 10:30:40 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:30:40 [INFO] Prompt ID: 17ff9d4c-ad3a-43c9-bce7-b1a5f2388e44
+2024-09-04 10:30:40 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:30:40 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:30:40 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:30:40 [INFO] Using cached response
+2024-09-04 10:30:40 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:30:40 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:30:40 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:30:40 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:30:40 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:30:40 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:30:40 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:30:40 [INFO] Saving charts to /Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png
+2024-09-04 10:30:40 [INFO] 
+Code running:
+```
+data = {'Category': ['MicrophonesSmall', 'AudioDevices', 'MicrophonesSmall'], 'Item': ['Piezoelectricbuzzers', 'ECMicrophone8mm', 'ECMicrophone3mm'], 'Supplier': ['StarElectronics', 'EdgeElectronics', 'FlipElectronics'], 'Supplier Site': ['Los Angles', 'Tokyo', 'New York'], 'Order Number': ['EC3MMORD1193', 'EC3MMORD1097', 'EC3MMORD1089'], 'Supplier Lead Time': [2, 2, 2], 'Historical Lead Time': [4, 5, 3], 'Variance Days': [3, 1, 2], 'Variance Percentage': [150, 50, 100]}
+df = dfs[0]
+avg_variance = df.groupby('Supplier')['Variance Percentage'].mean().reset_index()
+plt.figure(figsize=(10, 6))
+plt.bar(avg_variance['Supplier'], avg_variance['Variance Percentage'], color='skyblue')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.title('Average Variance Percentage per Supplier')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+        ```
+2024-09-04 10:30:40 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:30:40 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:30:40 [INFO] Answer: {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+2024-09-04 10:30:40 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:31:23 [INFO] Question: Plot me the chart for average variance percentage per supplier
+2024-09-04 10:31:23 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:31:23 [INFO] Prompt ID: 8a7f8a72-8a2b-43ee-bae6-c70aac6675b6
+2024-09-04 10:31:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:31:23 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:31:23 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:31:23 [INFO] Using cached response
+2024-09-04 10:31:23 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:31:23 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:31:23 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:31:23 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:31:23 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:31:23 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:31:23 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:31:23 [INFO] Saving charts to /Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png
+2024-09-04 10:31:23 [INFO] 
+Code running:
+```
+data = {'Category': ['MicrophonesSmall', 'AudioDevices', 'MicrophonesSmall'], 'Item': ['Piezoelectricbuzzers', 'ECMicrophone8mm', 'ECMicrophone3mm'], 'Supplier': ['StarElectronics', 'EdgeElectronics', 'FlipElectronics'], 'Supplier Site': ['Los Angles', 'Tokyo', 'New York'], 'Order Number': ['EC3MMORD1193', 'EC3MMORD1097', 'EC3MMORD1089'], 'Supplier Lead Time': [2, 2, 2], 'Historical Lead Time': [4, 5, 3], 'Variance Days': [3, 1, 2], 'Variance Percentage': [150, 50, 100]}
+df = dfs[0]
+avg_variance = df.groupby('Supplier')['Variance Percentage'].mean().reset_index()
+plt.figure(figsize=(10, 6))
+plt.bar(avg_variance['Supplier'], avg_variance['Variance Percentage'], color='skyblue')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.title('Average Variance Percentage per Supplier')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+        ```
+2024-09-04 10:31:23 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:31:23 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:31:23 [INFO] Answer: {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+2024-09-04 10:31:23 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:31:56 [INFO] Question: How many orders have variance percentage greater than 100%?
+2024-09-04 10:31:56 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:31:56 [INFO] Prompt ID: f62c43e8-1bd4-4406-8aa8-8aa78866733e
+2024-09-04 10:31:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:31:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:31:56 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:31:56 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:31:58 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+MicrophonesSmall,ECMicrophone8mm,FlipElectronics,Los Angles,EC3MMORD1085,2,3,3,150
+AudioDevices,PiezoTransducer,WaldomElectronics,CA,EC3MMORD1159,2,4,2,50
+AudioDevices,Piezoelectricbuzzers,InfiniteElectronics,Singapore,EC3MMORD1088,2,5,1,100
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ How many orders have variance percentage greater than 100%?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:31:58 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:32:00 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:32:00 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Dataframe
+df = dfs[0]
+
+# Count orders with variance percentage greater than 100%
+num_orders_greater_than_100 = df[df['Variance Percentage'] > 100].shape[0]
+
+# Result
+result = { "type": "string", "value": f"The number of orders with variance percentage greater than 100% is {num_orders_greater_than_100}." }
+            ```
+            
+2024-09-04 10:32:00 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:32:00 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:32:00 [INFO] 
+Code running:
+```
+df = dfs[0]
+num_orders_greater_than_100 = df[df['Variance Percentage'] > 100].shape[0]
+result = {'type': 'string', 'value': f'The number of orders with variance percentage greater than 100% is {num_orders_greater_than_100}.'}
+        ```
+2024-09-04 10:32:00 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:32:00 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:32:00 [INFO] Answer: {'type': 'string', 'value': 'The number of orders with variance percentage greater than 100% is 56.'}
+2024-09-04 10:32:00 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:32:02 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-04 10:32:45 [INFO] Question: Give me all the details of order EC3MMORD1017
+2024-09-04 10:32:45 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:32:45 [INFO] Prompt ID: 7c96dee5-4bba-4a4a-a74d-63e824ced796
+2024-09-04 10:32:45 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:32:45 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:32:45 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:32:45 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:32:47 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+AudioDevices,Piezoelectricbuzzers,InfiniteElectronics,Delhi,EC3MMORD1175,2,4,1,100
+MicrophonesSmall,ECMicrophone8mm,StarElectronics,Los Angles,EC3MMORD1101,2,5,2,50
+MicrophonesSmall,PiezoTransducer,WaldomElectronics,CA,EC3MMORD1185,2,3,3,150
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Give me all the details of order EC3MMORD1017
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:32:47 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:32:50 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:32:50 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+order_number = "EC3MMORD1017"
+order_details = []
+
+for df in dfs:
+    if order_number in df['Order Number'].values:
+        order_details.append(df[df['Order Number'] == order_number])
+
+result = {"type": "dataframe", "value": pd.concat(order_details)}
+            ```
+            
+2024-09-04 10:32:50 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:32:50 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:32:50 [INFO] 
+Code running:
+```
+order_number = 'EC3MMORD1017'
+order_details = []
+for df in dfs:
+    if order_number in df['Order Number'].values:
+        order_details.append(df[df['Order Number'] == order_number])
+result = {'type': 'dataframe', 'value': pd.concat(order_details)}
+        ```
+2024-09-04 10:32:50 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:32:50 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:32:50 [INFO] Answer: {'type': 'dataframe', 'value':             Category             Item           Supplier Supplier Site  Order Number  Supplier Lead Time  Historical Lead Time  Variance Days  Variance Percentage
+16  MicrophonesSmall  ECMicrophone3mm  WaldomElectronics     Singapore  EC3MMORD1017                   2                     3              1                   50}
+2024-09-04 10:32:50 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:34:54 [INFO] Question: Give me all the details of order EC3MMORD1017
+2024-09-04 10:34:54 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:34:54 [INFO] Prompt ID: 4376598a-4432-4fe1-a5f1-63b850196373
+2024-09-04 10:34:54 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:34:54 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:34:54 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:34:54 [INFO] Using cached response
+2024-09-04 10:34:54 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:34:54 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:34:54 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:34:54 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:34:54 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:34:54 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:34:54 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:34:54 [INFO] 
+Code running:
+```
+order_number = 'EC3MMORD1017'
+order_details = []
+for df in dfs:
+    if order_number in df['Order Number'].values:
+        order_details.append(df[df['Order Number'] == order_number])
+result = {'type': 'dataframe', 'value': pd.concat(order_details)}
+        ```
+2024-09-04 10:34:54 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:34:54 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:34:54 [INFO] Answer: {'type': 'dataframe', 'value':             Category             Item           Supplier Supplier Site  Order Number  Supplier Lead Time  Historical Lead Time  Variance Days  Variance Percentage
+16  MicrophonesSmall  ECMicrophone3mm  WaldomElectronics     Singapore  EC3MMORD1017                   2                     3              1                   50}
+2024-09-04 10:34:54 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:36:31 [INFO] Question: Give me all the details of order EC3MMORD1017
+2024-09-04 10:36:31 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:36:31 [INFO] Prompt ID: 2e799b1e-3ff1-4b74-8ee2-9286b3c3ae6c
+2024-09-04 10:36:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:36:31 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:36:31 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:36:31 [INFO] Using cached response
+2024-09-04 10:36:31 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:36:31 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:36:31 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:36:31 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:36:31 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:36:31 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:36:31 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:36:31 [INFO] 
+Code running:
+```
+order_number = 'EC3MMORD1017'
+order_details = []
+for df in dfs:
+    if order_number in df['Order Number'].values:
+        order_details.append(df[df['Order Number'] == order_number])
+result = {'type': 'dataframe', 'value': pd.concat(order_details)}
+        ```
+2024-09-04 10:36:31 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:36:31 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:36:31 [INFO] Answer: {'type': 'dataframe', 'value':             Category             Item           Supplier Supplier Site  Order Number  Supplier Lead Time  Historical Lead Time  Variance Days  Variance Percentage
+16  MicrophonesSmall  ECMicrophone3mm  WaldomElectronics     Singapore  EC3MMORD1017                   2                     3              1                   50}
+2024-09-04 10:36:31 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:38:20 [INFO] Question: Give me all the details of order EC3MMORD1017
+2024-09-04 10:38:20 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:38:20 [INFO] Prompt ID: ceffee34-3954-43ff-b12a-48f1fc63c878
+2024-09-04 10:38:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:38:20 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:38:20 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:38:20 [INFO] Using cached response
+2024-09-04 10:38:20 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:38:20 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:38:20 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:38:20 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:38:20 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:38:20 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:38:20 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:38:20 [INFO] 
+Code running:
+```
+order_number = 'EC3MMORD1017'
+order_details = []
+for df in dfs:
+    if order_number in df['Order Number'].values:
+        order_details.append(df[df['Order Number'] == order_number])
+result = {'type': 'dataframe', 'value': pd.concat(order_details)}
+        ```
+2024-09-04 10:38:20 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:38:20 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:38:20 [INFO] Answer: {'type': 'dataframe', 'value':             Category             Item           Supplier Supplier Site  Order Number  Supplier Lead Time  Historical Lead Time  Variance Days  Variance Percentage
+16  MicrophonesSmall  ECMicrophone3mm  WaldomElectronics     Singapore  EC3MMORD1017                   2                     3              1                   50}
+2024-09-04 10:38:20 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:38:22 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-04 10:38:31 [INFO] Question: How many orders have variance percentage greater than 100%?
+2024-09-04 10:38:31 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:38:31 [INFO] Prompt ID: d63d7228-82ab-4da6-a32c-1c05c330a5c0
+2024-09-04 10:38:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:38:31 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:38:31 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:38:31 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:38:33 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+AudioDevices,RectangularSpeaker,MouserElectronics,CA,EC3MMORD1133,2,4,1,150
+MicrophonesSmall,ECMicrophone3mm,FlipElectronics,Delhi,EC3MMORD1111,2,5,2,100
+MicrophonesSmall,SplashProofSwitch,StarElectronics,Singapore,EC3MMORD1168,2,3,3,50
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ How many orders have variance percentage greater than 100%?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:38:33 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:38:35 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:38:35 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+variance_greater_than_100 = 0
+for df in dfs:
+    variance_greater_than_100 += len(df[df['Variance Percentage'] > 100])
+
+# Declare result variable
+result = {"type": "number", "value": variance_greater_than_100}
+            ```
+            
+2024-09-04 10:38:35 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:38:35 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:38:35 [INFO] 
+Code running:
+```
+variance_greater_than_100 = 0
+for df in dfs:
+    variance_greater_than_100 += len(df[df['Variance Percentage'] > 100])
+result = {'type': 'number', 'value': variance_greater_than_100}
+        ```
+2024-09-04 10:38:35 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:38:35 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:38:35 [INFO] Answer: {'type': 'number', 'value': 56}
+2024-09-04 10:38:35 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:39:56 [INFO] Question: How many orders have variance percentage greater than 100%?
+2024-09-04 10:39:56 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:39:56 [INFO] Prompt ID: f010badd-ff05-4092-91bb-0dc642266e32
+2024-09-04 10:39:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:39:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:39:56 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:39:56 [INFO] Using cached response
+2024-09-04 10:39:56 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:39:56 [INFO] Executing Step 2: Skipping...
+2024-09-04 10:39:56 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:39:56 [INFO] Executing Step 3: Skipping...
+2024-09-04 10:39:56 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:39:56 [INFO] Executing Step 4: Skipping...
+2024-09-04 10:39:56 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:39:56 [INFO] 
+Code running:
+```
+total_orders = 0
+for df in dfs:
+    orders = df[df['Variance Percentage'] > 100]
+    total_orders += len(orders)
+result = {'type': 'number', 'value': total_orders}
+        ```
+2024-09-04 10:39:56 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:39:56 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:39:56 [INFO] Answer: {'type': 'number', 'value': 56}
+2024-09-04 10:39:56 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:39:58 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-04 10:40:07 [INFO] Question: Plot me the chart for average variance percentage per supplier
+2024-09-04 10:40:07 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:40:07 [INFO] Prompt ID: 4e355776-338e-417e-8f3d-365f1d2ad156
+2024-09-04 10:40:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:40:07 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:40:07 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:40:07 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:40:09 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+MicrophonesSmall,PiezoTransducer,EdgeElectronics,Delhi,EC3MMORD1001,2,4,3,50
+AudioDevices,Piezoelectricbuzzers,StarElectronics,CA,EC3MMORD1098,2,3,1,100
+AudioDevices,RectangularSpeaker,InfiniteElectronics,New York,EC3MMORD1154,2,5,2,150
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Plot me the chart for average variance percentage per supplier
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:40:09 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:40:13 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:40:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Convert the dataframe to a single dataframe
+df = pd.concat(dfs)
+
+# Calculate the average variance percentage per supplier
+average_variance = df.groupby('Supplier')['Variance Percentage'].mean()
+
+# Plot the chart for average variance percentage per supplier
+plt.figure(figsize=(12, 6))
+average_variance.plot(kind='bar', color='skyblue')
+plt.title('Average Variance Percentage per Supplier')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', linewidth=0.5)
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('average_variance_per_supplier.png')
+
+# Declare result variable with the plot filename
+result = {"type": "plot", "value": "average_variance_per_supplier.png"}
+            ```
+            
+2024-09-04 10:40:13 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:40:13 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:40:13 [INFO] Saving charts to /Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png
+2024-09-04 10:40:13 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+average_variance = df.groupby('Supplier')['Variance Percentage'].mean()
+plt.figure(figsize=(12, 6))
+average_variance.plot(kind='bar', color='skyblue')
+plt.title('Average Variance Percentage per Supplier')
+plt.xlabel('Supplier')
+plt.ylabel('Average Variance Percentage')
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', linewidth=0.5)
+plt.tight_layout()
+plt.savefig('/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+        ```
+2024-09-04 10:40:13 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:40:13 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:40:13 [INFO] Answer: {'type': 'plot', 'value': '/Users/kumrohik/Downloads/Coding/agentbackend/exports/charts/temp_chart.png'}
+2024-09-04 10:40:13 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:40:49 [INFO] Question: Give me all the details of order EC3MMORD1029
+2024-09-04 10:40:49 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-09-04 10:40:49 [INFO] Prompt ID: 27368947-6beb-4caf-b366-b302a33adca9
+2024-09-04 10:40:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-04 10:40:49 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-04 10:40:49 [INFO] Executing Step 1: CacheLookup
+2024-09-04 10:40:49 [INFO] Executing Step 2: PromptGeneration
+2024-09-04 10:40:50 [INFO] Using prompt: <dataframe>
+dfs[0]:199x9
+Category,Item,Supplier,Supplier Site,Order Number,Supplier Lead Time,Historical Lead Time,Variance Days,Variance Percentage
+MicrophonesSmall,PiezoTransducer,EdgeElectronics,Delhi,EC3MMORD1001,2,4,3,50
+AudioDevices,Piezoelectricbuzzers,StarElectronics,CA,EC3MMORD1098,2,3,1,100
+AudioDevices,RectangularSpeaker,InfiniteElectronics,New York,EC3MMORD1154,2,5,2,150
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Give me all the details of order EC3MMORD1029
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-04 10:40:50 [INFO] Executing Step 3: CodeGenerator
+2024-09-04 10:40:55 [INFO] Prompt used:
+            None
+            
+2024-09-04 10:40:55 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Create a DataFrame with the provided data
+data = {
+    'Category': ['MicrophonesSmall', 'AudioDevices', 'AudioDevices'],
+    'Item': ['PiezoTransducer', 'Piezoelectricbuzzers', 'RectangularSpeaker'],
+    'Supplier': ['EdgeElectronics', 'StarElectronics', 'InfiniteElectronics'],
+    'Supplier Site': ['Delhi', 'CA', 'New York'],
+    'Order Number': ['EC3MMORD1001', 'EC3MMORD1098', 'EC3MMORD1154'],
+    'Supplier Lead Time': [2, 2, 2],
+    'Historical Lead Time': [4, 3, 5],
+    'Variance Days': [3, 1, 2],
+    'Variance Percentage': [50, 100, 150]
+}
+
+dfs = [pd.DataFrame(data)]
+
+# Find details of order EC3MMORD1029
+order_details = dfs[0][dfs[0]['Order Number'] == 'EC3MMORD1029']
+
+result = {"type": "dataframe", "value": order_details}
+            ```
+            
+2024-09-04 10:40:55 [INFO] Executing Step 4: CachePopulation
+2024-09-04 10:40:55 [INFO] Executing Step 5: CodeCleaning
+2024-09-04 10:40:55 [INFO] 
+Code running:
+```
+data = {'Category': ['MicrophonesSmall', 'AudioDevices', 'AudioDevices'], 'Item': ['PiezoTransducer', 'Piezoelectricbuzzers', 'RectangularSpeaker'], 'Supplier': ['EdgeElectronics', 'StarElectronics', 'InfiniteElectronics'], 'Supplier Site': ['Delhi', 'CA', 'New York'], 'Order Number': ['EC3MMORD1001', 'EC3MMORD1098', 'EC3MMORD1154'], 'Supplier Lead Time': [2, 2, 2], 'Historical Lead Time': [4, 3, 5], 'Variance Days': [3, 1, 2], 'Variance Percentage': [50, 100, 150]}
+order_details = dfs[0][dfs[0]['Order Number'] == 'EC3MMORD1029']
+result = {'type': 'dataframe', 'value': order_details}
+        ```
+2024-09-04 10:40:55 [INFO] Executing Step 6: CodeExecution
+2024-09-04 10:40:55 [INFO] Executing Step 7: ResultValidation
+2024-09-04 10:40:55 [INFO] Answer: {'type': 'dataframe', 'value':         Category                Item           Supplier Supplier Site  Order Number  Supplier Lead Time  Historical Lead Time  Variance Days  Variance Percentage
+28  AudioDevices  RectangularSpeaker  WaldomElectronics     Singapore  EC3MMORD1029                   2                     3              1                   50}
+2024-09-04 10:40:55 [INFO] Executing Step 8: ResultParsing
+2024-09-04 10:40:57 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

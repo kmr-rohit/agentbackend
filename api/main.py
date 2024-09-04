@@ -64,8 +64,41 @@ async def ask_question(request: QuestionRequest):
     user_question = request.question
     # Try to answer using the SmartDataframe
     smart_response = sdf.chat(user_question)
-    if(isinstance(smart_response,str) == True):
-        if(smart_response.endswith('.png')):
+    # print(type(smart_response));
+    if((type(smart_response) != str) & (type(smart_response) != int)): 
+        combined_response = {
+            "question": user_question,
+            "response": smart_response,
+        }
+        # Use the Autogen agent to summarize the response
+        response = assistant.generate_reply(
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a text summarizer. I am trying to interact with CSV data. I will give you a Question String and a Generated Answer String. Summarize the given response based on the user query in a readable and easy-to-understand format. Dont add this statement in answer : Based on the query, it appears that you are looking for the number of orders that have a variance percentage greater than 100% and are from a supplier named StarElectronics.\n\nHere is a summary of the response:\n\n*"
+                },
+                {
+                    "role": "user",
+                    "content": str(combined_response)
+                }
+            ]
+        )
+        print(response)
+        #if 'choices' in response:
+        #summarized_response = response['choices'][0]['message']['content']
+        #else:
+            #summarized_response = "Unexpected response structure"
+
+        #summarized_response = response['choices'][0]['message']['content']
+        summarized_response=response['content']
+        return {
+            'question': user_question,
+            'responseType':'text',
+            'response': summarized_response
+        }
+    else:
+        smart_response = str(smart_response);
+        if( (type(smart_response) == str) & (smart_response.endswith('.png'))):
             image_path=smart_response
             image_base64 = convert_image_to_base64(image_path)
             return {
@@ -104,37 +137,7 @@ async def ask_question(request: QuestionRequest):
                 'responseType':'text',
                 'response': summarized_response
             }
-    else : 
-        combined_response = {
-            "question": user_question,
-            "response": smart_response,
-        }
-        # Use the Autogen agent to summarize the response
-        response = assistant.generate_reply(
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a text summarizer. I am trying to interact with CSV data. I will give you a Question String and a Generated Answer String. Summarize the given response based on the user query in a readable and easy-to-understand format. Dont add this statement in answer : Based on the query, it appears that you are looking for the number of orders that have a variance percentage greater than 100% and are from a supplier named StarElectronics.\n\nHere is a summary of the response:\n\n*"
-                },
-                {
-                    "role": "user",
-                    "content": str(combined_response)
-                }
-            ]
-        )
-        print(response)
-        #if 'choices' in response:
-        #summarized_response = response['choices'][0]['message']['content']
-        #else:
-            #summarized_response = "Unexpected response structure"
-
-        #summarized_response = response['choices'][0]['message']['content']
-        summarized_response=response['content']
-        return {
-            'question': user_question,
-            'responseType':'text',
-            'response': summarized_response
-        }
+        
 # Endpoint to train the agent with a single Q&A pair
 @app.post("/train")
 async def train_agent(request: TrainRequest):
