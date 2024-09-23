@@ -11,7 +11,7 @@ from pandasai import SmartDataframe, Agent
 from fastapi.middleware.cors import CORSMiddleware
 
 # Set your PandasAI API key
-os.environ['PANDASAI_API_KEY'] = "$2a$10$8WI2DrXQEXRsW1cYyNChiOIt0d1Ay7npV8BPmPe2pHxDC/.gtf/ze"
+os.environ['PANDASAI_API_KEY'] = "$2a$10$maoWdMf9NSvwUUwPxKJaC.6HvSpXBpYvDZR8ar78z6L836RFI4uMa"
 # Load the CSV data
 csv_file_path = os.path.join(os.path.dirname(__file__), 'data.csv')
 df = pd.read_csv(csv_file_path)
