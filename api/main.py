@@ -11,7 +11,7 @@ from pandasai import SmartDataframe, Agent
 from fastapi.middleware.cors import CORSMiddleware
 
 # Set your PandasAI API key
-os.environ['PANDASAI_API_KEY'] = "$2a$10$maoWdMf9NSvwUUwPxKJaC.6HvSpXBpYvDZR8ar78z6L836RFI4uMa"
+os.environ['PANDASAI_API_KEY'] = "zzzzzzzzz"
 # Load the CSV data
 csv_file_path = os.path.join(os.path.dirname(__file__), 'data.csv')
 df = pd.read_csv(csv_file_path)
@@ -23,7 +23,7 @@ config_list = [
     {
         "model": "llama3-8b-8192",
         "base_url": "https://api.groq.com/openai/v1",
-        "api_key": "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",
+        "api_key": "zzzzzz",
         "api_type": "groq"
     }
 ]
