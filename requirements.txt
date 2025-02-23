@@ -157,7 +157,7 @@ toml==0.10.2
 tomlkit==0.12.5
 torch==2.4.0
 tqdm==4.66.5
-transformers==4.44.2
+transformers==4.48.0
 twine==5.1.1
 typer==0.9.4
 typing-inspect==0.9.0
